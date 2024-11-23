@@ -1,0 +1,725 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+  <title>Travel Package Website</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f0a500;
+    }
+
+    section {
+      padding: 3rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform-origin: center;
+    }
+
+    #about {
+      background: #f5f5f5;
+    }
+
+    #places {
+      background: #f5f5f5;
+    }
+
+    .day-section {
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .day-title {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    figure {
+      background-color: #f55f5;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-size: cover;
+      background-position: center;
+    }
+
+    figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    figure:hover {
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+      transform: scale(1.05);
+    }
+
+    /* Scroll zoom effect */
+    .scroll-zoom {
+      transform: scale(1);
+      transition: transform 1s ease, opacity 1s ease;
+      margin-top: 50px;
+    }
+
+    .zoom-visible {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    #inclusions {
+      background: #f5f5f5;
+    }
+
+    /* Ensuring text doesn't overlap */
+    section h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    /* Adjusting layout on hover for zoom */
+    .zoom-visible {
+      padding: 4rem 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Guttal Travel Packages</h1>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#places">Places to Cover</a>
+      <a href="#stay">Stay Details</a>
+      <a href="#inclusions">Inclusions &amp; Exclusions</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="scroll-zoom" id="about">
+    <h2>About Us</h2>
+    <p>We are a travel agency dedicated to making your journeys unforgettable. We offer a variety of travel packages to exotic destinations.</p>
+  </section>
+
+  <section class="scroll-zoom" id="places">
+    <h2>Places to Be Covered</h2>
+
+    <!-- Day 1 -->
+    <div class="day-section">
+      <h3 class="day-title">Day 1</h3>
+      <div class="image-gallery">
+        <figure>
+          <img alt="Pokkode Lake" src="https://www.wayanad.com/admin/userfiles/1494571003_pookode-lake1.jpg" />
+          <figcaption><a href="https://www.mywayanad.com/kuruvadweep">Pookode Lake</a></figcaption>
+        </figure>
+        <figure>
+          <img alt="Banasura Sagar Dam" src="https://www.keralahydeltourism.com/images/news/banasura-sagar.jpg" />
+          <figcaption><a href="https://example.com/link-to-place2">Banasura Sagar Dam</a></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-section">
+      <h3 class="day-title">Day 2</h3>
+      <div class="image-gallery">
+        <figure>
+          <img alt="Tea Garden" src="https://aftertherains.in/blog/wp-content/uploads/2023/04/Wayanads-Tea-Plantations.jpg" />
+          <figcaption><a href="https://example.com/link-to-place4">Tea Garden</a></figcaption>
+        </figure>
+        <figure>
+          <img alt="Karappuzha Dam" src="https://www.keralatourism.holiday/blog/wp-content/uploads/2019/04/blog-cover-7.jpg" />
+          <figcaption><a href="https://example.com/link-to-place5">Karappuzha Dam</a></figcaption>
+        </figure>
+        <figure>
+          <img alt="Soochipara Water Falls" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Soochipara_Falls%2C_Wayanad_Kerala%2C_2013_%28Landscape%29.jpeg" />
+          <figcaption><a href="https://example.com/link-to-place4">Soochipara Water Falls</a></figcaption>
+        </figure>
+        <figure>
+          <img alt="Karlad Lake" src="https://wayanadtourism.co.in/images//tourist-places/karlad-lake-wayanad/karlad-lake-wayanad-history-wayanad-tourism.jpg.jpg" />
+          <figcaption><a href="https://example.com/link-to-place4">Karlad Lake</a></figcaption>
+        </figure>
+                <figure>
+          <img alt="Karlad Lake" src="https://enooru.co.in/images/upload/63ed1fa1906c5.jpg" />
+          <figcaption><a href="https://example.com/link-to-place4">En OOru Trabal Village</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  
+      <!-- Day 3 -->
+    <div class="day-section">
+      <h3 class="day-title">Day 3</h3>
+      <div class="image-gallery">
+        <figure>
+          <img alt="Pet Station Matool" src="https://i.ytimg.com/vi/jbDkRdK4pAg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBnOY_t4cwPI9S0xvGuHX3xslo35g" />
+          <figcaption><a href="https://example.com/link-to-place7">Pet Station</a></figcaption>
+        </figure>
+		        <figure>
+          <img alt="Pet Station Matool" src="https://www.nativeplanet.com/img/2014/06/09-muzhappilangadbeach1.jpg" />
+          <figcaption><a href="https://example.com/link-to-place7">Oliyankara Beach</a></figcaption>
+        </figure>
+		        <figure>
+          <img alt="Pet Station Matool" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ad/bf/86/v-pra-kaayal-floating.jpg?w=1200&h=-1&s=1"/>
+          <figcaption><a href="https://example.com/link-to-place7">Vayapara Floating Bridge</a></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-section">
+      <h3 class="day-title">Day 4</h3>
+      <div class="image-gallery">
+        <figure>
+          <img alt="Chempara Peak" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfo_h6nd3DOAMVD5k4mF6sWLiQ8m0zdtEXzA&s" />
+          <figcaption><a href="https://example.com/link-to-place7">Snake Park</a></figcaption>
+        </figure>
+		        <figure>
+          <img alt="Chempara Peak" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Parassini.jpg" />
+          <figcaption><a href="https://example.com/link-to-place7">Parassinikadav Temple</a></figcaption>
+        </figure>
+		        <figure>
+          <img alt="Chempara Peak" src="https://karnatakatourism.org/wp-content/uploads/2020/06/Mysuru-Palace-banner-1920_1100.jpg" />
+          <figcaption><a href="https://example.com/link-to-place7">Mysore Palace</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  
+ 
+<section class="scroll-zoom" id="stay">
+  <h2>Stay Details</h2>
+  <p>Here are detail of the accommodation options you will enjoy during your trip:</p>
+  
+  <div class="image-gallery">
+    <figure>
+      <img alt="Stay Option 1" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/6c/29/8c/icon-residency.jpg?w=700&amp;h=-1&amp;s=1" />
+      <figcaption>Luxury Stay</figcaption>
+    </figure>
+    <figure>
+      <img alt="Stay Option 2" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/308877436.jpg?k=122a7d5cded7d4be19f61d0d49bab647824c091db378e25b1e3cd499184d506a&amp;o=&amp;hp=1" />
+      <figcaption>Cozy Rooms</figcaption>
+    </figure>
+    <figure>
+      <img alt="Stay Option 3" src="https://iconresidency.com/images/portfolio/2.jpg" />
+      <figcaption>Budget Hotel</figcaption>
+    </figure>
+  </div>
+
+  <p>Each option offers comfort and convenience to ensure you have a pleasant stay.</p>
+</section>
+
+
+<section class="scroll-zoom" id="inclusions">
+  <h2>Package Inclusion &amp; Exclusion</h2>
+
+  <div class="inclusions-exclusions">
+    <!-- Inclusions -->
+    <div class="inclusions">
+      <h3>Inclusions</h3>
+      <ul>
+        <li><i class="fas fa-bed"></i> Accommodation (2 Nights)</li>
+        <li><i class="fas fa-bus"></i> Transportation (All Days)</li>
+        <li><i class="fas fa-camera"></i> Sightseeing Tour</li>
+        <li><i class="fas fa-wallet"></i> All Taxes Included</li>
+      </ul>
+    </div>
+
+    <!-- Exclusions -->
+    <div class="exclusions">
+      <h3>Exclusions</h3>
+      <ul>
+        <li><i class="fas fa-times"></i> Food</li>
+        <li><i class="fas fa-times"></i> Personal Expenses</li>
+        <li><i class="fas fa-times"></i> Insurance</li>
+        <li><i class="fas fa-times"></i> Any other items not mentioned in inclusions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+ <section class="scroll-zoom" id="stay">
+  <h2>Travel Vehicle Details</h2>
+  <p>Here are detail of the travel options you will enjoy during your trip:</p>
+  
+  <div class="image-gallery">
+    <figure>
+      <img src="https://cabsrental.in/wp-content/uploads/2021/04/Tempo-Traveller-12-seater-Price-in-BangaloreCabsrental.in_-scaled.jpg" />
+      <figcaption>Vehicle</figcaption>
+    </figure>
+    <figure>
+      <img alt="Stay Option 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmxOlx5B90wlMBmkF_2T7LWs-E_DyJVNjvoAWZckH1YOqcMI1CV5MgfGScCMmZD6XUl9uiHKt3FzVdKq0kpeIxv69pj5dT7ieCeJjoFY00dEi9Vtu-ncaLmLjRDWvmUXBX_sIQ3uR2GNePFya5U2Da9ZF8v5nIjAlE_BnKdlHpq3IWarLAFfndrVz3Hg-U/s320/IMG-20241113-WA0008.jpg" />
+      <figcaption>Inner View</figcaption>
+    </figure>
+    <figure>
+      <img alt="Stay Option 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0JAmuUrVJNomUeit5SRRkwhndjqqxWzr6G-pR-s8gTyC66I_bv5Gi1RD3UrfM3_q7WXb5wNAjmZ35g5StaSyLVc5WJiRvrH6U_K_9lLZa9ho_xDSbuPzZXrmPZfdY3QvnuhP-AagLO8_79vOzfj_PJgrwEVdcx25OO8pp5DFlYEkDDvmT-4Z_TyQ9juNR/s320/IMG-20241113-WA0007.jpg" />
+      <figcaption>Inner View</figcaption>
+    </figure>
+  </div>
+
+  <p>Images are just for your information! dont consider this as final. According to Number of People vehicle will change</p>
+</section>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight - 100) {
+          section.classList.add('zoom-visible');
+        }
+      });
+    });
+  </script>
+  <style>
+  /* Inclusions and Exclusions section */
+  #inclusions ul,
+  #exclusions ul {
+    list-style-type: none;  /* Remove the bullets */
+    padding-left: 0; /* Remove any left padding */
+  }
+
+  #inclusions li,
+  #exclusions li {
+    padding-left: 20px; /* Add padding to the left of each list item */
+    position: relative;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #inclusions li i,
+  #exclusions li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    color: #f0a500;
+  }
+</style>
+
+<!-- contact section here -->
+  <section id="contact" class="scroll-zoom">
+  <h2>Contact Us</h2>
+  <p>Get in touch with us for more information or bookings.</p>
+    <p>For any inquiries, feel free to reach out to us:</p>
+  
+  <!-- Contact Info and Call Now Button -->
+  <div class="contact-info">
+    <div class="phone-number">
+      <a href="tel:+91 9207010930" class="call-button">
+        <span class="phone-text">Call Now</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Contact Us Section */
+  #contact {
+    background: #f5f5f5;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #contact p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-number {
+    position: relative;
+  }
+
+  .call-button {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    background-color: #f0a500;
+    border-radius: 25px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+
+  .call-button:hover {
+    background-color: #ff8c00; /* Change color on hover */
+  }
+
+  .phone-text {
+    margin-right: 10px;
+  }
+
+  /* Initially hide the phone number */
+  .phone-number-hover {
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 1rem;
+    color: #fff;
+    transition: opacity 0.8s ease;
+    background-color: #000000; /* Change color on hover */
+  }
+
+  /* Show the phone number when hovered */
+  .call-button:hover .phone-number-hover {
+    opacity: 1;
+  }
+</style>
+  
+<!-- Amenities in Wayanad section -->
+<section id="wayanad-amenities">
+  <h2>Amenities in Wayanad</h2>
+  <div class="amenities-container">
+    <div class="amenity-images">
+      <div class="amenity-item">
+        <img src="https://framerusercontent.com/assets/3eETLREqyMBH6pqAv91oH5xa4E.png" alt="Zip Line">
+        <p>Zip Line</p>
+      </div>
+      <div class="amenity-item">
+        <img src="https://touristplacesinwayanad.com/wp-content/uploads/2022/02/Pookode-Lake-Image-1024x536.png" alt="Boating">
+        <p>Boating</p>
+      </div>
+      <div class="amenity-item">
+        <img src="https://adriftcouple.com/wp-content/uploads/2021/02/karlad-lake-wayanad.jpg?w=600" alt="Kayaking">
+        <p>Kayaking</p>
+      </div>
+      <div class="amenity-item">
+        <img src="https://media.holidify.com/images/cmsuploads/compressed/Chembra-Peak-Wayanad_20240305131226.jpg" alt="Trekking">
+        <p>Trekking</p>
+      </div>
+      <div class="amenity-item">
+        <img src="https://img.onmanorama.com/content/dam/mm/en/kerala/top-news/images/2023/6/25/tea-plantation-1.jpg" alt="Tea Estate">
+        <p>Tea Estate</p>
+      </div>
+      <div class="amenity-item">
+        <img src="https://thewoodsresorts.com/uploads/media/shutterstock_2358769477-1-6681444fb2ac6.jpg" alt="Glass Bridge">
+        <p>Glass Bridge</p>
+      </div>
+      <!-- Add more amenities here if necessary -->
+    </div>
+  </div>
+</section>
+
+<style>
+  #wayanad-amenities {
+    background-color: #f5f5f5;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  #wayanad-amenities h2 {
+    margin-bottom: 2rem;
+  }
+
+  .amenities-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .amenity-images {
+    display: flex;
+    animation: scroll-left 20s linear infinite; /* Auto-scroll animation */
+  }
+
+  .amenity-item {
+    margin-right: 2rem;
+    text-align: center;
+  }
+
+  .amenity-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .amenity-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Moves images completely to the left */
+    }
+  }
+
+  /* Ensure the animation is continuous and loops properly */
+  .amenities-container {
+    position: relative;
+  }
+
+  .amenity-images {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding-right: 100vw;  /* Ensures there's enough space to scroll */
+  }
+
+  .amenity-item {
+    flex: 0 0 auto;
+  }
+
+  /* Duplicating the items for smooth infinite scroll */
+  .amenities-container .amenity-images::after {
+    content: "";
+    flex: 0 0 auto;
+    width: 1px;
+  }
+</style>
+
+  
+<!-- Our partners section with fixed arrows -->
+<section id="partners">
+  <h2>Coming Soon...</h2>
+  
+  <!-- Left arrow outside the scrolling container -->
+  <button class="scroll-button left" onclick="scrollLeft()">&#10094;</button>
+  
+  <!-- Scrolling container for images -->
+  <div class="partners-container">
+    <div class="partner-images">
+      <img src="https://www.shutterstock.com/image-vector/kannur-city-name-india-asia-260nw-2378304851.jpg" alt="Partner 1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUYYq-cmuYWUbDEIdtLVQzqf5fQ3Yq7t5KbA&s" alt="Partner 2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoGNnBpuoPVb8u4kZaXrDnTEx6epXO2_-Haw&s" alt="Partner 3">
+      <img src="https://hiddenmantra.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-19-at-15.17.35-5-682x1024.webp" alt="Partner 4">
+      <img src="https://inkannur.in/wp-content/uploads/2023/06/snake-park-knr.jpg" alt="Partner 5">
+      <img src="https://www.theyyamcalendar.com/images/theyyam_history/thaiparadevatha.jpg" alt="Partner 6">
+      <img src="https://www.dtpckannur.com/uploads/picture_gallery/gallery_images/muzhappilangad-drivein-beach-kannur-11-20230410161148535114.webp" alt="Partner 7">
+      <img src="https://th-i.thgim.com/public/news/national/kerala/jq858w/article26132034.ece/alternates/FREE_1200/TV31WALKWAYSS" alt="Partner 8">
+      <img src="https://www.dtpckannur.com/uploads/picture_gallery/gallery_images/alakapuri-waterfalls-at-kanjirakolly-20230413182807651175.jpg" alt="Partner 9">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8QY9cNC7yz9jeF463V0UnvqBDLj8mqDa3aQ&s" alt="Partner 10">
+    </div>
+  </div>
+  
+  <!-- Right arrow outside the scrolling container -->
+  <button class="scroll-button right" onclick="scrollRight()">&#10095;</button>
+</section>
+
+  
+<style>
+  #partners {
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  #partners h2 {
+    margin-bottom: 2rem;
+  }
+
+  .partners-container {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partner-images {
+    display: inline-flex;
+  }
+
+  .partner-images img {
+    margin-right: 1rem;
+    height: 100px;
+    width: auto;
+  }
+
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .scroll-button.left {
+    left: 10px; /* Fix position to the left corner */
+  }
+
+  .scroll-button.right {
+    right: 10px; /* Fix position to the right corner */
+  }
+
+  .scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+</style>
+
+<script>
+  // Function to scroll left
+  function scrollLeft() {
+    const container = document.querySelector('.partners-container');
+    container.scrollLeft -= 200; // Adjust scroll distance
+  }
+
+  // Function to scroll right
+  function scrollRight() {
+    const container = document.querySelector('.partners-container');
+    container.scrollLeft += 200; // Adjust scroll distance
+  }
+</script>
+
+<!-- Social Media Icons Section -->
+<section id="social-media">
+  <h2>Follow Us</h2>
+  <div class="social-icons">
+    <!-- Instagram Icon -->
+    <a href="https://www.instagram.com/yourusername" target="_blank" class="social-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- Facebook Icon -->
+    <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+      <i class="fab fa-facebook"></i>
+    </a>
+    
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/yourphonenumber" target="_blank" class="social-icon">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- WhatsApp Group Icon -->
+    <a href="https://chat.whatsapp.com/yourgroupid" target="_blank" class="social-icon">
+      <i class="fab fa-whatsapp"></i> <!-- WhatsApp icon used for both individual and group -->
+    </a>
+  </div>
+</section>
+
+<!-- Add the following CSS to style the icons -->
+<style>
+  #social-media {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+
+  #social-media h2 {
+    margin-bottom: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .social-icon:hover {
+    color: #0077b5; /* Change color on hover (can customize) */
+  }
+
+  /* Customize icon sizes for smaller screens */
+  @media (max-width: 768px) {
+    .social-icon {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
+<!-- Add Font Awesome CDN link for icons -->
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+  
+  
+</body>
+</html>
